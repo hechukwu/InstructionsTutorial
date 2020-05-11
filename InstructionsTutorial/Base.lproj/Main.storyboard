@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,77 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="InstructionsTutorial" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search text" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MvM-MM-IPK">
+                                <rect key="frame" x="25" y="169" width="364" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="bYX-14-zWY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is a ui label containing text we search for." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A6o-Vf-oZD">
+                                <rect key="frame" x="25" y="338" width="364" height="100"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="fmu-yg-tGj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QnK-vx-d3e">
+                                <rect key="frame" x="25" y="762" width="364" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="uAL-UA-aEh"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ACP-6b-hEh">
+                                <rect key="frame" x="25" y="94" width="364" height="41"/>
+                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="NvK-Io-DFh"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Dark"/>
+                                    <segment title="Light"/>
+                                </segments>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" red="0.29803921570000003" green="0.29803921570000003" blue="0.29803921570000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ACP-6b-hEh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="7r5-CB-N7H"/>
+                            <constraint firstItem="A6o-Vf-oZD" firstAttribute="trailing" secondItem="ACP-6b-hEh" secondAttribute="trailing" id="9a5-zl-uoS"/>
+                            <constraint firstItem="QnK-vx-d3e" firstAttribute="trailing" secondItem="ACP-6b-hEh" secondAttribute="trailing" id="9fy-K3-O22"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="QnK-vx-d3e" secondAttribute="bottom" constant="50" id="QCi-L1-MOm"/>
+                            <constraint firstItem="QnK-vx-d3e" firstAttribute="leading" secondItem="ACP-6b-hEh" secondAttribute="leading" id="Taq-Ln-5Ez"/>
+                            <constraint firstItem="A6o-Vf-oZD" firstAttribute="top" secondItem="MvM-MM-IPK" secondAttribute="bottom" constant="119" id="bFY-UQ-YYl"/>
+                            <constraint firstItem="MvM-MM-IPK" firstAttribute="top" secondItem="ACP-6b-hEh" secondAttribute="bottom" constant="35" id="d7Z-G9-yTd"/>
+                            <constraint firstItem="MvM-MM-IPK" firstAttribute="leading" secondItem="ACP-6b-hEh" secondAttribute="leading" id="eIG-jO-z3B"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ACP-6b-hEh" secondAttribute="trailing" constant="25" id="leS-6P-ATS"/>
+                            <constraint firstItem="A6o-Vf-oZD" firstAttribute="leading" secondItem="ACP-6b-hEh" secondAttribute="leading" id="oXN-n4-QGs"/>
+                            <constraint firstItem="MvM-MM-IPK" firstAttribute="trailing" secondItem="ACP-6b-hEh" secondAttribute="trailing" id="vRk-B9-GWr"/>
+                            <constraint firstItem="ACP-6b-hEh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="ysz-8q-JwY"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="controlButton" destination="QnK-vx-d3e" id="U62-Dd-V2Q"/>
+                        <outlet property="searchTextField" destination="MvM-MM-IPK" id="WtD-wL-saV"/>
+                        <outlet property="segmentedControl" destination="ACP-6b-hEh" id="dgu-Gw-D3L"/>
+                        <outlet property="textLabel" destination="A6o-Vf-oZD" id="nOG-dl-mXe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="139" y="113"/>
         </scene>
     </scenes>
 </document>
