@@ -24,7 +24,7 @@ class ViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         if !AppManager.getUserSeenAppInstruction() {
-            self.coachMarksController.start(in: .window(over: self))
+            self.coachMarksController.start(in: .viewController(self))
         }
     }
 
@@ -70,5 +70,9 @@ extension ViewController: CoachMarksControllerDataSource, CoachMarksControllerDe
         }
 
         return (bodyView: coachViews.bodyView, arrowView: coachViews.arrowView)
+    }
+
+    func coachMarksController(_ coachMarksController: CoachMarksController, didEndShowingBySkipping skipped: Bool) {
+        AppManager.setUserSeenAppInstruction()
     }
 }
